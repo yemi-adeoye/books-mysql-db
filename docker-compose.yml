@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  books-mysql-db:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - MYSQl_DATABASE=${MYSQl_DATABASE}
+        - MYSQl_USER=${MYSQl_USER}
+        - MYSQl_PASSWORD=${MYSQl_PASSWORD}
+        - MYSQl_ROOT_PASSWORD=${MYSQl_ROOT_PASSWORD}
+    ports:
+      - "${MYSQl_PORT}:3306"
+
