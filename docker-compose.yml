@@ -6,10 +6,10 @@ services:
       context: ./
       dockerfile: Dockerfile
       args:
-        - MYSQl_DATABASE=${MYSQl_DATABASE}
-        - MYSQl_USER=${MYSQl_USER}
-        - MYSQl_PASSWORD=${MYSQl_PASSWORD}
-        - MYSQl_ROOT_PASSWORD=${MYSQl_ROOT_PASSWORD}
+        - MYSQL_DATABASE=${MYSQL_DATABASE}
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
-      - "${MYSQl_PORT}:3306"
+      - "${MYSQL_PORT}:3306"
 

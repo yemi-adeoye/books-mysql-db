@@ -1,8 +1,8 @@
-create IF NOT exists DATABASE db_books;
+create DATABASE IF NOT exists db_books;
 
 use db_books;
 
-create table authors (
+create table if not exists authors (
 	id INT,
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
@@ -111,7 +111,7 @@ insert into db_books (id, first_name, last_name, email, gender) values (98, 'Rho
 insert into db_books (id, first_name, last_name, email, gender) values (99, 'Corie', 'Puckett', 'cpuckett2q@taobao.com', 'Female');
 insert into db_books (id, first_name, last_name, email, gender) values (100, 'Griz', 'Lampet', 'glampet2r@opera.com', 'Male');
 
-create table db_books (
+create table if not exists db_books (
 	id INT,
 	title VARCHAR(50),
 	isbn VARCHAR(50),
